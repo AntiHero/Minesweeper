@@ -1,1 +1,1 @@
-### Basic linters setup
+### Minesweeper
