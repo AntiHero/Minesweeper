@@ -1,0 +1,60 @@
+{
+	"name": "my-webpack-project",
+	"version": "1.0.0",
+	"description": "My webpack project",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint --cache . --ext .js,.ts,.tsx",
+		"prettier": "prettier --check . --ignore-path .gitignore",
+		"check-types": "tsc",
+		"validate": "npm-run-all --parallel check-types lint prettier",
+		"lint:fix": "eslint --cache --fix . && prettier --write .",
+		"prepare": "husky install",
+		"build": "webpack --node-env=production",
+		"dev": "webpack serve --node-env=development"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AntiHero/linters-boilerplate.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/AntiHero/linters-boilerplate/issues"
+	},
+	"homepage": "https://github.com/AntiHero/linters-boilerplate#readme",
+	"devDependencies": {
+		"@types/react": "^17.0.38",
+		"@types/react-dom": "^17.0.11",
+		"@typescript-eslint/eslint-plugin": "^5.8.1",
+		"@typescript-eslint/parser": "^5.8.1",
+		"@webpack-cli/generators": "^2.4.1",
+		"eslint": "^8.5.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^8.3.0",
+		"html-webpack-plugin": "^5.5.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.1.4",
+		"mini-css-extract-plugin": "^2.4.5",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.5.1",
+		"sass": "^1.45.1",
+		"sass-loader": "^12.4.0",
+		"ts-loader": "^9.2.6",
+		"typescript": "^4.5.4",
+		"webpack": "^5.65.0",
+		"webpack-cli": "^4.9.1",
+		"webpack-dev-server": "^4.7.1"
+	},
+	"lint-staged": {
+		"*.{js,ts,tsx}": "eslint --cache --fix",
+		"*.{js,ts,tsx,json,html,css,md}": "prettier --write"
+	},
+	"dependencies": {
+		"eslint-config-airbnb-typescript": "^16.1.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	}
+}
