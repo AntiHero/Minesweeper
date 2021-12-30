@@ -26,6 +26,8 @@
 	},
 	"homepage": "https://github.com/AntiHero/linters-boilerplate#readme",
 	"devDependencies": {
+		"@types/react": "^17.0.38",
+		"@types/react-dom": "^17.0.11",
 		"@typescript-eslint/eslint-plugin": "^5.8.1",
 		"@typescript-eslint/parser": "^5.8.1",
 		"@webpack-cli/generators": "^2.4.1",
