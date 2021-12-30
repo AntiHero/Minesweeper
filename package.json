@@ -1,0 +1,42 @@
+{
+	"name": "linters-boilerplate",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint --cache . --ext .js,.ts,.tsx --ignore-path .gitignore",
+		"prettier": "prettier --check . --ignore-path .gitignore",
+		"check-types": "tsc",
+		"validate": "npm-run-all --parallel check-types lint prettier",
+		"lint:fix": "eslint --cache --fix . && prettier --write .",
+		"prepare": "husky install"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AntiHero/linters-boilerplate.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/AntiHero/linters-boilerplate/issues"
+	},
+	"homepage": "https://github.com/AntiHero/linters-boilerplate#readme",
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.8.1",
+		"@typescript-eslint/parser": "^5.8.1",
+		"eslint": "^8.5.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.25.3",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.1.4",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.5.1"
+	},
+	"lint-staged": {
+		"*.{js,ts,tsx}": "eslint --cache --fix",
+		"*.{js,ts,tsx,json,css,md}": "prettier --write"
+	}
+}
