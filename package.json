@@ -5,14 +5,14 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"lint": "eslint --cache . --ext .js,.ts,.tsx --ignore-path .gitignore",
+		"lint": "eslint --cache . --ext .js,.ts,.tsx",
 		"prettier": "prettier --check . --ignore-path .gitignore",
 		"check-types": "tsc",
 		"validate": "npm-run-all --parallel check-types lint prettier",
 		"lint:fix": "eslint --cache --fix . && prettier --write .",
 		"prepare": "husky install",
 		"build": "webpack --node-env=production",
-		"serve": "webpack serve --node-env=development"
+		"dev": "webpack serve --node-env=development"
 	},
 	"repository": {
 		"type": "git",
