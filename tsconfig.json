@@ -9,5 +9,6 @@
 		"moduleResolution": "node",
 		"outDir": "dist",
 		"jsx": "react"
-	}
+	},
+	"include": ["src/**/*.tsx", "src/**/*.ts"]
 }

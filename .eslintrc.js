@@ -3,24 +3,18 @@ module.exports = {
 		browser: true,
 		es2021: true,
 	},
-	extends: ['airbnb-base', 'prettier'],
+	extends: [
+		'airbnb',
+		'airbnb-typescript',
+		'plugin:@typescript-eslint/recommended',
+		'prettier',
+	],
+	parser: '@typescript-eslint/parser',
+	plugins: ['@typescript-eslint'],
 	parserOptions: {
 		ecmaVersion: 13,
 		sourceType: 'module',
-		ecmaFeatures: {
-			jsx: true,
-		},
+		project: 'tsconfig.json',
 	},
-	overrides: [
-		{
-			files: '**/*.+(ts|tsx)',
-			parser: '@typescript-eslint/parser',
-			parserOptions: {
-				project: 'tsconfig.json',
-				plugins: ['@typescript-eslint'],
-				extends: ['plugin:@typescript-eslint/recommended'],
-			},
-		},
-	],
 	rules: {},
 };
